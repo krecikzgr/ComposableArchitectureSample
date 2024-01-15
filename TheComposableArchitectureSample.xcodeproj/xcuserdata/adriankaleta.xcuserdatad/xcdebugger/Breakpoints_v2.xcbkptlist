@@ -46,8 +46,8 @@
             filePath = "TheComposableArchitectureSample/NewsFeature/NewsFeature.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -114,6 +114,118 @@
             endingLineNumber = "52"
             landmarkName = "updateStoredArticles(_:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A4088AE7-16AD-4AE6-9C02-0B0447D99C52"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheComposableArchitectureSample/NewsFeature/NewsFeature.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "A4088AE7-16AD-4AE6-9C02-0B0447D99C52 - 835215583b07f033"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; () in closure #2 (ComposableArchitecture.ViewStore&lt;TheComposableArchitectureSample.NewsFeature.State, TheComposableArchitectureSample.NewsFeature.Action&gt;) -&gt; &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0 in TheComposableArchitectureSample.NewsView.body.getter : some"
+                  moduleName = "TheComposableArchitectureSample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adriankaleta/Documents/Projects/Personal/iOS/TheComposableArchitectureSample/TheComposableArchitectureSample/NewsFeature/NewsFeature.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "A4088AE7-16AD-4AE6-9C02-0B0447D99C52 - 9276c08ba105ffac"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; () in closure #1 (TheComposableArchitectureSample.Article) -&gt; &lt;&lt;opaque return type of SwiftUI.View.onTapGesture(count: Swift.Int, perform: () -&gt; ()) -&gt; some&gt;&gt;.0 in closure #2 (ComposableArchitecture.ViewStore&lt;TheComposableArchitectureSample.NewsFeature.State, TheComposableArchitectureSample.NewsFeature.Action&gt;) -&gt; &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0 in TheComposableArchitectureSample.NewsView.body.getter : some"
+                  moduleName = "TheComposableArchitectureSample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adriankaleta/Documents/Projects/Personal/iOS/TheComposableArchitectureSample/TheComposableArchitectureSample/NewsFeature/NewsFeature.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "308">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "26D8EB81-C8BC-421E-8529-90B99B01BDC7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheComposableArchitectureSample/NewsFeature/NewsFeature.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4245A041-46F3-4BC2-A3F9-CF1981CC2158"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheComposableArchitectureSample/NewsFeature/NewsFeature.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "4245A041-46F3-4BC2-A3F9-CF1981CC2158 - bb567d3b3f912621"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; ComposableArchitecture.EmptyReducer&lt;TheComposableArchitectureSample.ArticleDetailsFeature.State, TheComposableArchitectureSample.ArticleDetailsFeature.State&gt; in TheComposableArchitectureSample.NewsFeature.body.getter : some"
+                  moduleName = "TheComposableArchitectureSample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adriankaleta/Documents/Projects/Personal/iOS/TheComposableArchitectureSample/TheComposableArchitectureSample/NewsFeature/NewsFeature.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "100">
+               </Location>
+               <Location
+                  uuid = "4245A041-46F3-4BC2-A3F9-CF1981CC2158 - db92beb0e937621f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; TheComposableArchitectureSample.ArticleDetailsFeature in TheComposableArchitectureSample.NewsFeature.body.getter : some"
+                  moduleName = "TheComposableArchitectureSample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adriankaleta/Documents/Projects/Personal/iOS/TheComposableArchitectureSample/TheComposableArchitectureSample/NewsFeature/NewsFeature.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "80">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
