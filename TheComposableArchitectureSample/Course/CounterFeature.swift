@@ -5,6 +5,8 @@
 //  Created by Adrian Kaleta on 13/01/2024.
 //
 
+let apiKey: String = "ab1a59d01b5c41f09a9bab0e29ac5d65"
+
 import ComposableArchitecture
 import SwiftUI
 

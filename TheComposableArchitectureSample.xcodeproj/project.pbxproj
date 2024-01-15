@@ -16,6 +16,9 @@
 		7F452DB22B532D4800D4A55E /* TheComposableArchitectureSampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F452DB12B532D4800D4A55E /* TheComposableArchitectureSampleUITestsLaunchTests.swift */; };
 		7F452DC02B53318700D4A55E /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 7F452DBF2B53318700D4A55E /* ComposableArchitecture */; };
 		7F452DC32B53327B00D4A55E /* CounterFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F452DC22B53327B00D4A55E /* CounterFeature.swift */; };
+		7F452DC62B53522C00D4A55E /* NewsFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F452DC52B53522C00D4A55E /* NewsFeature.swift */; };
+		7F452DC92B535D1600D4A55E /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F452DC82B535D1600D4A55E /* News.swift */; };
+		7F452DCC2B54A22E00D4A55E /* UserDefaultsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F452DCB2B54A22E00D4A55E /* UserDefaultsProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		7F452DAF2B532D4800D4A55E /* TheComposableArchitectureSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheComposableArchitectureSampleUITests.swift; sourceTree = "<group>"; };
 		7F452DB12B532D4800D4A55E /* TheComposableArchitectureSampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheComposableArchitectureSampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7F452DC22B53327B00D4A55E /* CounterFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterFeature.swift; sourceTree = "<group>"; };
+		7F452DC52B53522C00D4A55E /* NewsFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeature.swift; sourceTree = "<group>"; };
+		7F452DC82B535D1600D4A55E /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		7F452DCB2B54A22E00D4A55E /* UserDefaultsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +104,9 @@
 		7F452D932B532D4700D4A55E /* TheComposableArchitectureSample */ = {
 			isa = PBXGroup;
 			children = (
+				7F452DCA2B54A22000D4A55E /* Utilities */,
+				7F452DC72B535D0B00D4A55E /* Model */,
+				7F452DC42B53520300D4A55E /* NewsFeature */,
 				7F452DC12B53324C00D4A55E /* Course */,
 				7F452D942B532D4700D4A55E /* TheComposableArchitectureSampleApp.swift */,
 				7F452D962B532D4700D4A55E /* ContentView.swift */,
@@ -138,6 +147,30 @@
 				7F452DC22B53327B00D4A55E /* CounterFeature.swift */,
 			);
 			path = Course;
+			sourceTree = "<group>";
+		};
+		7F452DC42B53520300D4A55E /* NewsFeature */ = {
+			isa = PBXGroup;
+			children = (
+				7F452DC52B53522C00D4A55E /* NewsFeature.swift */,
+			);
+			path = NewsFeature;
+			sourceTree = "<group>";
+		};
+		7F452DC72B535D0B00D4A55E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7F452DC82B535D1600D4A55E /* News.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7F452DCA2B54A22000D4A55E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				7F452DCB2B54A22E00D4A55E /* UserDefaultsProvider.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,8 +310,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F452DC32B53327B00D4A55E /* CounterFeature.swift in Sources */,
+				7F452DC62B53522C00D4A55E /* NewsFeature.swift in Sources */,
 				7F452D972B532D4700D4A55E /* ContentView.swift in Sources */,
+				7F452DC92B535D1600D4A55E /* News.swift in Sources */,
 				7F452D952B532D4700D4A55E /* TheComposableArchitectureSampleApp.swift in Sources */,
+				7F452DCC2B54A22E00D4A55E /* UserDefaultsProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
