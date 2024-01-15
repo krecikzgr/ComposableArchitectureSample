@@ -22,12 +22,6 @@ struct ArticleDetailsFeature {
         case .fetchData:
             return .none
         }
-        //return .none
-//      switch action {
-//      case .addButtonTapped:
-//        // TODO: Handle action
-//        return .none
-//      }
     }
   }
 }

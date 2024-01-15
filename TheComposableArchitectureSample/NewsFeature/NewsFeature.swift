@@ -26,12 +26,12 @@ struct NewsFeature  {
             case .fetchArticles:
                 state.isLoading = true
                 return .run { send in
-                    let articles = try? await NewsRepository.shared.fetchData()
+                    let articles = try? await APIClient.shared.fetchData()
                     await send(.articlesResponse(.success(articles ?? [])))
                 }
             case .likeArticle(let article):
                 return .run { send in
-                    NewsRepository.shared.updateStoredArticles(article)
+                    APIClient.shared.updateStoredArticles(article)
                     await send(.fetchArticles)
                 }
             case let .articlesResponse(.success(items)):

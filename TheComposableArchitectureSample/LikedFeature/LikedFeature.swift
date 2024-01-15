@@ -29,12 +29,12 @@ struct LikedFeature  {
             case .fetchLikedArticles:
                 state.isLoading = true
                 return .run { send in
-                    let articles = NewsRepository.shared.fetchLikedArticles()
+                    let articles = APIClient.shared.fetchLikedArticles()
                     await send(.articlesResponse(.success(articles )))
                 }
             case .likeArticle(let article):
                 return .run { send in
-                    NewsRepository.shared.updateStoredArticles(article)
+                    APIClient.shared.updateStoredArticles(article)
                     await send(.fetchLikedArticles)
                 }
             case let .articlesResponse(.success(items)):
