@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct NewsSourceView: View {
+struct NewsSourceListItemView: View {
     var item: NewsSource
-
+    
     init(item: NewsSource) {
         self.item = item
     }
@@ -19,7 +19,6 @@ struct NewsSourceView: View {
             Text(item.name)
             Spacer()
             Text(item.category)
-            
         }
     }
 }

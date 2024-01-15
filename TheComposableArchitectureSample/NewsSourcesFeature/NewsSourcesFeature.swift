@@ -49,7 +49,7 @@ struct NewsSourceListView: View {
         NavigationStack{
             WithViewStore(self.store, observe: {$0}) { viewStore in
                 List(viewStore.items ) { item in
-                    NewsSourceView(item: item)
+                    NewsSourceListItemView(item: item)
                         .onTapGesture {
                             viewStore.send(.setSource(item))
                         }

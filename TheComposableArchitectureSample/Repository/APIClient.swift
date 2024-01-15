@@ -55,7 +55,6 @@ class APIClient {
             .data(from:URL(string: "https://newsapi.org/v2/top-headlines/sources?apiKey=\(apiKey)")!)
         
         guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
-            // Handle HTTP errors here
             throw URLError(.badServerResponse) // Use an appropriate error
         }
         let newsResponse = try? JSONDecoder().decode(NewsSourceReesponse.self, from: data)

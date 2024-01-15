@@ -10,20 +10,20 @@ import ComposableArchitecture
 
 @Reducer
 struct ArticleDetailsFeature {
-  struct State: Equatable {
-      var article: Article
-  }
-  enum Action {
-    case fetchData
-  }
-  var body: some ReducerOf<Self> {
-    Reduce { state, action in
-        switch action {
-        case .fetchData:
-            return .none
+    struct State: Equatable {
+        var article: Article
+    }
+    enum Action {
+        case fetchData
+    }
+    var body: some ReducerOf<Self> {
+        Reduce { state, action in
+            switch action {
+            case .fetchData:
+                return .none
+            }
         }
     }
-  }
 }
 
 struct ArticleDetailView: View {
@@ -36,7 +36,7 @@ struct ArticleDetailView: View {
                     Text(viewStore.article.title ?? "")
                         .font(.title)
                         .fontWeight(.bold)
-
+                    
                     AsyncImage(
                         url: URL(string: viewStore.article.urlToImage ?? ""),
                         content: { image in
@@ -48,11 +48,11 @@ struct ArticleDetailView: View {
                             ProgressView()
                         }
                     )
-
+                    
                     Text(viewStore.article.author ?? "")
                         .font(.subheadline)
                         .foregroundColor(.gray)
-
+                    
                     Text(viewStore.article.content )
                         .font(.body)
                 }

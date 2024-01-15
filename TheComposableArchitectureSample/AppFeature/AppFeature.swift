@@ -12,12 +12,12 @@ import SwiftUI
 struct AppFeature {
     struct State {
         var tab1 = NewsFeature.State()
-        var tab2 = LikedFeature.State()
+        var tab2 = LikedArticlesFeature.State()
         var tab3 = NewsSourcesFeature.State()
     }
     enum Action {
         case tab1(NewsFeature.Action)
-        case tab2(LikedFeature.Action)
+        case tab2(LikedArticlesFeature.Action)
         case tab3(NewsSourcesFeature.Action)
     }
     var body: some ReducerOf<Self> {
@@ -25,7 +25,7 @@ struct AppFeature {
             NewsFeature()
         }
         Scope(state: \.tab2, action: \.tab2) {
-            LikedFeature()
+            LikedArticlesFeature()
         }
         Scope(state: \.tab3, action: \.tab3) {
             NewsSourcesFeature()
@@ -47,7 +47,7 @@ struct AppView: View {
                     Text("News")
                 }
             
-            LikedItemsView(store: store.scope(state: \.tab2, action: \.tab2))
+            LikedArticlesView(store: store.scope(state: \.tab2, action: \.tab2))
                 .tabItem {
                     Text("Liked")
                 }

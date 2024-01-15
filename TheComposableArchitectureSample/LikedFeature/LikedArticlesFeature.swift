@@ -7,10 +7,9 @@
 
 import SwiftUI
 import ComposableArchitecture
-//TODO: Maybe we could use one Feature for both states?. For now using two to use compose property
 
 @Reducer
-struct LikedFeature  {
+struct LikedArticlesFeature  {
     struct State: Equatable {
         var items: [Article] = []
         var isLoading: Bool = false
@@ -50,17 +49,15 @@ struct LikedFeature  {
     }
 }
 
-struct LikedItemsView: View {
-    let store: StoreOf<LikedFeature>
+struct LikedArticlesView: View {
+    let store: StoreOf<LikedArticlesFeature>
     
     var body: some View {
-        //TODO: Move list to separate view
         WithViewStore(self.store, observe: {$0}) { viewStore in
             List(viewStore.items ) { item in
-                ArticleView(item: item) {
+                ArticleListItemView(item: item) {
                     viewStore.send(.likeArticle(article: item))
                 }
-                
             }.onAppear {
                 viewStore.send(.fetchLikedArticles)
             }
@@ -68,7 +65,7 @@ struct LikedItemsView: View {
     }
 }
 
-struct LikedItemsPreview: PreviewProvider {
+struct LikedArticlesPreview: PreviewProvider {
     static var previews: some View {
         NewsView(
             store: Store(initialState: NewsFeature.State()) {

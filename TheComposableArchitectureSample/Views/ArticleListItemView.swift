@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ArticleView: View {
+struct ArticleListItemView: View {
     var item: Article
     var action: ()->Void
     init(item: Article, action: @escaping () -> Void) {
@@ -36,6 +36,7 @@ struct ArticleView: View {
                 Image(systemName: item.isLiked ? "heart.fill" : "heart")
                     .foregroundColor(item.isLiked ? .red : .gray)
             }
+            .buttonStyle(.plain)
         }
     }
 }

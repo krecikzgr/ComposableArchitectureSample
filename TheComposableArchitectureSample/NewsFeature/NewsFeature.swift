@@ -61,7 +61,7 @@ struct NewsView: View {
         NavigationStack{
             WithViewStore(self.store, observe: {$0}) { viewStore in
                 List(viewStore.items ) { item in
-                    ArticleView(item: item) {
+                    ArticleListItemView(item: item) {
                         viewStore.send(.likeArticle(article: item))
                     }.onTapGesture {
                         viewStore.send(.articleSelected(article: item))
