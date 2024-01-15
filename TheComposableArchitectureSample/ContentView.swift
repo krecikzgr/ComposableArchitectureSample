@@ -10,10 +10,10 @@ import ComposableArchitecture
 
 struct ContentView: View {
     var body: some View {
-        NewsView(
-            store: Store(initialState: NewsFeature.State()) {
-            NewsFeature()
-          })
+        let store = Store(initialState: AppFeature.State()) {
+          AppFeature()
+        }
+        AppView(store: store)
     }
 }
 

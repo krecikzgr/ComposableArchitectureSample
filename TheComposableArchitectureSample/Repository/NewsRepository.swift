@@ -34,7 +34,11 @@ class NewsRepository {
     }
     
     func fetchLikedArticles() -> [Article] {
-        return UserDefaultsProvider.shared.retrieveArticles()?.articles ?? []
+        var articles = UserDefaultsProvider.shared.retrieveArticles()?.articles ?? []
+        articles.enumerated().forEach({ index, article in
+            articles[index].isLiked = UserDefaultsProvider.shared.isArticleLiked(article)
+        })
+        return articles
     }
     
     func updateStoredArticles(_ article: Article) {
