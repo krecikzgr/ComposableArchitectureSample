@@ -1,17 +1,23 @@
+//
+//  LikedFeature.swift
+//  TheComposableArchitectureSample
+//
+//  Created by Adrian Kaleta on 15/01/2024.
+//
+
 import SwiftUI
 import ComposableArchitecture
-
-// Define the reducer to handle state changes
+//TODO: Maybe we could use one Feature for both states?. For now using two to use compose property
 
 @Reducer
-struct NewsFeature  {
+struct LikedFeature  {
     struct State: Equatable {
         var items: [Article] = []
         var isLoading: Bool = false
     }
     
     enum Action {
-        case fetchArticles
+        case fetchLikedArticles
         case likeArticle(article: Article)
         case articlesResponse(Result<[Article], Error>)
     }
@@ -20,16 +26,16 @@ struct NewsFeature  {
         Reduce{ state, action in
             
             switch action {
-            case .fetchArticles:
+            case .fetchLikedArticles:
                 state.isLoading = true
                 return .run { send in
-                    let articles = try? await NewsRepository.shared.fetchData()
-                    await send(.articlesResponse(.success(articles ?? [])))
+                    let articles = NewsRepository.shared.fetchLikedArticles()
+                    await send(.articlesResponse(.success(articles )))
                 }
             case .likeArticle(let article):
                 return .run { send in
                     NewsRepository.shared.updateStoredArticles(article)
-                    await send(.fetchArticles)
+                    await send(.fetchLikedArticles)
                 }
             case let .articlesResponse(.success(items)):
                 state.items = items
@@ -44,23 +50,25 @@ struct NewsFeature  {
     }
 }
 
-struct NewsView: View {
-    let store: StoreOf<NewsFeature>
+struct LikedItemsView: View {
+    let store: StoreOf<LikedFeature>
     
     var body: some View {
+        //TODO: Move list to separate view
         WithViewStore(self.store, observe: {$0}) { viewStore in
             List(viewStore.items ) { item in
                 ArticleView(item: item) {
                     viewStore.send(.likeArticle(article: item))
                 }
+                
             }.onAppear {
-                viewStore.send(.fetchArticles)
+                viewStore.send(.fetchLikedArticles)
             }
         }
     }
 }
 
-struct NewsPreview: PreviewProvider {
+struct LikedItemsPreview: PreviewProvider {
     static var previews: some View {
         NewsView(
             store: Store(initialState: NewsFeature.State()) {
@@ -69,3 +77,4 @@ struct NewsPreview: PreviewProvider {
         )
     }
 }
+

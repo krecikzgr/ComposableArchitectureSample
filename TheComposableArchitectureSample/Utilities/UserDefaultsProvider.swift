@@ -30,7 +30,6 @@ class UserDefaultsProvider {
         return response?.articles.contains(where: { oldArticle in
             oldArticle.id == article.id
         }) ?? false
-        
     }
     //TODO: Could be moved to two methods
     func updateStoredArticles(_ article: Article) {
